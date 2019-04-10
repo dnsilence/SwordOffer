@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 
-def Find(matrix, number):
+def find(matrix, number):
     if matrix is not None:
         row = len(matrix)
         column = len(matrix[0])
@@ -19,6 +19,7 @@ def Find(matrix, number):
 
 
 if __name__ == '__main__':
-    matrix = [[1, 4, 7], [2, 5, 8], [3, 6, 9], [4, 7, 10]]
-    a, b = Find(matrix, 19)
+    # matrix = [[1, 4, 7], [2, 5, 8], [3, 6, 9], [4, 7, 10]]
+    matrix = [[]]
+    a, b = find(matrix, 19)
     print(a, b)
