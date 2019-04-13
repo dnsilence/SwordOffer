@@ -3,18 +3,18 @@
 
 def find(matrix, number):
     if matrix is not None:
-        row = len(matrix)
-        column = len(matrix[0])
+        rows = len(matrix)
+        columns = len(matrix[0])
         # 从右上角开始查询
-        i = 0               # 从第0行开始
-        j = column - 1  # 从第column-1列开始
-        while i <= (row-1) and j >= 0:
-            if matrix[i][j] < number:       # 当前值小于寻找值
-                i += 1  # 往下找
-            elif matrix[i][j] > number:     # 当前值大于寻找值
-                j -= 1  # 往左找
+        row = 0               # 从第0行开始
+        column = columns - 1  # 从第column-1列开始
+        while row <= (rows-1) and column >= 0:
+            if matrix[row][column] < number:       # 当前值小于寻找值
+                row += 1  # 往下找
+            elif matrix[row][column] > number:     # 当前值大于寻找值
+                column -= 1  # 往左找
             else:
-                return True, [i, j]
+                return True, [row, column]
     return False, [0, 0]
 
 
