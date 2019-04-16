@@ -147,16 +147,27 @@ class LinkedList(object):
                     print("Index exceeded!")
 
 
+def print_reverse(linkedlist_head):
+    """使用递归实现倒序打印"""
+    if linkedlist_head != 0:     # 如果当前传入指针非空
+        if linkedlist_head.next != 0:
+            print_reverse(linkedlist_head.next)
+        print(linkedlist_head.data)  # 打印当前结点数据
+
+
 if __name__ == '__main__':
+
     linkedlist = LinkedList()   # 生成空链表
     linkedlist.print()   # 打印
     linkedlist.init([1, 2, 3, 4, 5])     # 链表初始化
     linkedlist.print()   # 打印
-    print(linkedlist.getitem(4))
-    linkedlist.append(6)
-    print(linkedlist.find(3))
-    # linkedlist.insert(5, 5)
+    print_reverse(linkedlist.head)
+
+    # print(linkedlist.getitem(4))
+    # linkedlist.append(6)
+    # print(linkedlist.find(3))
+    # # linkedlist.insert(5, 5)
+    # # linkedlist.print()   # 打印
+    # linkedlist.delete(1)
     # linkedlist.print()   # 打印
-    linkedlist.delete(1)
-    linkedlist.print()   # 打印
 
