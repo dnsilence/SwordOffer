@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-class Tree(object):
+class BinaryTree(object):
     """二叉树类"""
     def __init__(self, root=None, left=None, right=None):
         """初始化"""
@@ -46,21 +46,30 @@ class Tree(object):
         print("Post order:")
         self.__post_order(self)
 
+    @staticmethod
+    def re_construct_binary_tree(pre_order=None, in_order=None):
+        if pre_order and in_order:  # 检查输入是否为空
+            if set(pre_order) != set(in_order):     # 若输入集不同
+                return None
+            root = BinaryTree(pre_order[0])
+            root_index = in_order.index(pre_order[0])
+            root.left = BinaryTree.re_construct_binary_tree(
+                pre_order[1:root_index+1], in_order[:root_index])
+            root.right = BinaryTree.re_construct_binary_tree(
+                pre_order[root_index+1:], in_order[root_index+1:])
+            return root
+
 
 if __name__ == '__main__':
-    tree = Tree('D',
-                Tree('B',
-                     Tree('A'),
-                     Tree('C')
-                     ),
-                Tree('E',
-                     None,
-                     Tree('G',
-                          Tree('F')
-                          )
-                     )
-                )
+    binary_tree = BinaryTree(
+        'D', BinaryTree('B', BinaryTree('A'), BinaryTree('C')),
+        BinaryTree('E', None, BinaryTree('G', BinaryTree('F'))))
 
-    tree.pre_order()
-    tree.in_order()
-    tree.post_order()
+    binary_tree.pre_order()
+    binary_tree.in_order()
+    binary_tree.post_order()
+    recon_tree = BinaryTree.re_construct_binary_tree(
+        ['D', 'B', 'A', 'C', 'E', 'G', 'F'],
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G'])
+    recon_tree.post_order()
+
