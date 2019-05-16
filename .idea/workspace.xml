@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a10e2e8e-c395-404f-957c-3d404d3b8b0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chap2/matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap2/dynamic_programming.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap2/greedy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +32,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap2/matrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="73" column="15" lean-forward="true" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+            <state relative-caret-position="-405">
+              <caret column="14" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chap2/dynamic_programming.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chap2/greedy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -95,6 +114,8 @@
         <option value="$PROJECT_DIR$/chap2/string.py" />
         <option value="$PROJECT_DIR$/chap2/array.py" />
         <option value="$PROJECT_DIR$/chap2/matrix.py" />
+        <option value="$PROJECT_DIR$/chap2/dynamic_programming.py" />
+        <option value="$PROJECT_DIR$/chap2/greedy.py" />
       </list>
     </option>
   </component>
@@ -112,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,7 +155,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,8 +176,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.matrix">
-    <configuration name="defaultparam" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.greedy">
+    <configuration name="dynamic_programming" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SwordOffer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -164,11 +185,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pythontest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythontest/defaultparam.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap2/dynamic_programming.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,7 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="linklist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="greedy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SwordOffer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,7 +231,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap2/linklist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap2/greedy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.greedy" />
+        <item itemvalue="Python.dynamic_programming" />
         <item itemvalue="Python.matrix" />
         <item itemvalue="Python.fibonacci" />
         <item itemvalue="Python.tree" />
-        <item itemvalue="Python.linklist" />
-        <item itemvalue="Python.defaultparam" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556453213607</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="matrix path">
+      <created>1557667933350</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557667933350</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -446,7 +474,8 @@
     <MESSAGE value="reconstruct binary tree" />
     <MESSAGE value="fibonacci" />
     <MESSAGE value="classification" />
-    <option name="LAST_COMMIT_MESSAGE" value="classification" />
+    <MESSAGE value="matrix path" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix path" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -519,8 +548,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chap2/matrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="73" column="15" lean-forward="true" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        <state relative-caret-position="-405">
+          <caret column="14" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/dynamic_programming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/greedy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
     </entry>
