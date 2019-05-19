@@ -160,15 +160,18 @@ class LinkedList(object):
 def delete_duplication(p_head):
     """删除一个排序链表中重复的节点"""
     if p_head is None or p_head.next is None:
+        # 传入为空或只有一个元素
         return p_head
     first = Node(-1)    # 生成一个临时节点，头指针为first，删除头结点时有用
     first.next = p_head     # 临时节点指向传入指针头结点
     last = first    # 生成一个指针用于指向重复值的上一个结点
     while p_head and p_head.next:   # 如果当前头指针不为空且下一个也不为空
+        # 因为p_head发生移动，所以必须检查当前是否为零，
+        # p_head.next若为空，则后面不会有重复值
         if p_head.data == p_head.next.data:   # 如果当前节点的和下一节点值相同
             val = p_head.data    # 提取重复值
             while p_head and val == p_head.data:     # 没有下一个节点或者值不相等
-                p_head = p_head.next    # 移动指针
+                p_head = p_head.next    # 移动指针，可能使得p_head为空
             last.next = p_head      # 通过更新last的下一个值删除掉重复结点
         else:   # 否则
             last = p_head   # 更新当前节点到last
@@ -189,7 +192,8 @@ if __name__ == '__main__':
     linkedlist = LinkedList()   # 生成空链表
     # linkedlist.print()   # 打印
     # linkedlist.init([1, 2, 3, 4, 5])     # 链表初始化
-    linkedlist.init([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])     # 链表初始化
+    linkedlist.init([1, 1, 1, 1, 1])     # 链表初始化
+    # linkedlist.init([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])     # 链表初始化
     # linkedlist.print()   # 打印
     # linkedlist.print_reverse()
     print_linkedlist(delete_duplication(linkedlist.head))
