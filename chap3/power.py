@@ -1,7 +1,5 @@
-# -*- coding:utf-8 -*-
-
-
 def power(base, exponent):
+    """求指数"""
     try:
         result = power_with_unsigned_exponent(base, abs(exponent))
         if exponent < 0:
