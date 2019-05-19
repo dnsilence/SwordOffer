@@ -2,8 +2,8 @@
 
 
 class Node(object):
-    """链表结点类,默认指针为零，即不存在下个结点"""
-    def __init__(self, value, pointer=0):
+    """链表结点类,默认指针不存在下个结点"""
+    def __init__(self, value, pointer=None):
         """初始化结点"""
         self.data = value
         self.next = pointer
@@ -13,11 +13,11 @@ class LinkedList(object):
     """链表类"""
     def __init__(self):
         """初始化链表"""
-        self.head = 0   # 链表头指针
+        self.head = None   # 链表头指针
 
     def is_empty(self):
         """检查链表是否为空"""
-        if self.head == 0:
+        if self.head is None:
             return True
         else:
             return False
@@ -27,32 +27,33 @@ class LinkedList(object):
             print("Linked list is empty!")
         else:
             p = self.head
-            while p != 0:
+            while p is not None:
                 print(p.data, p.next)
                 p = p.next
 
     def print_reverse(self, head=None):
-        if head is None:
+        """链表反转打印"""
+        if not head:    # 传入，注意这里的赋值，必须放前面
             head = self.head
-        """使用递归实现倒序打印"""
-        if head != 0:  # 如果当前传入指针非空
-            if head.next != 0:
+        if head:
+            # 使用递归实现倒序打印
+            # if head is not None:  # 如果当前传入指针非空
+            if head.next:
                 self.print_reverse(head.next)
             print(head.data)  # 打印当前结点数据
 
     def length(self):
         """计算链表中结点个数"""
         length = 0
-        p = self.head   # 提取头指针值
-        while p != 0:
+        pointer = self.head   # 提取头指针值
+        while pointer:
             length += 1
-            p = p.next
-
+            pointer = pointer.next
         return length
 
     def clear(self):
         """清空链表"""
-        self.head = 0
+        self.head = None
 
     def getitem(self, index):
         """获取链表中第index个节点，从0开始"""
@@ -61,7 +62,7 @@ class LinkedList(object):
         else:
             j = 0
             p = self.head  # 提取头指针值
-            while p.next != 0 and j < index:  # 寻找第index个结点
+            while p.next and j < index:  # 寻找第index个结点
                 j += 1
                 p = p.next
 
@@ -77,7 +78,7 @@ class LinkedList(object):
         else:
             index = 0
             p = self.head
-            while p.next != 0 and p.data != value:
+            while p.next and p.data != value:
                 index += 1
                 p = p.next
 
@@ -105,7 +106,7 @@ class LinkedList(object):
             self.head = q
         else:   # 链表非空
             p = self.head
-            while p.next != 0:
+            while p.next:
                 p = p.next
             p.next = q
 
@@ -123,7 +124,7 @@ class LinkedList(object):
                 j = 0
                 post = self.head
                 p = self.head
-                while p.next != 0 and j < index:
+                while p.next and j < index:
                     j += 1
                     post = p    # 标记前一个结点
                     p = p.next  # 标记下一个结点
@@ -146,7 +147,7 @@ class LinkedList(object):
                 j = 0
                 p = self.head
                 post = self.head
-                while p.next != 0 and j < index:
+                while p.next and j < index:
                     j += 1
                     post = p    # 第j个节点
                     p = p.next  # 标记下一个结点
@@ -156,14 +157,42 @@ class LinkedList(object):
                     print("Index exceeded!")
 
 
+def delete_duplication(p_head):
+    """删除一个排序链表中重复的节点"""
+    if p_head is None or p_head.next is None:
+        return p_head
+    first = Node(-1)    # 生成一个临时节点，头指针为first，删除头结点时有用
+    first.next = p_head     # 临时节点指向传入指针头结点
+    last = first    # 生成一个指针用于指向重复值的上一个结点
+    while p_head and p_head.next:   # 如果当前头指针不为空且下一个也不为空
+        if p_head.data == p_head.next.data:   # 如果当前节点的和下一节点值相同
+            val = p_head.data    # 提取重复值
+            while p_head and val == p_head.data:     # 没有下一个节点或者值不相等
+                p_head = p_head.next    # 移动指针
+            last.next = p_head      # 通过更新last的下一个值删除掉重复结点
+        else:   # 否则
+            last = p_head   # 更新当前节点到last
+            p_head = p_head.next    # 移动指针
+    return first.next
+
+
+def print_linkedlist(p_head):
+    if p_head is None:
+        print("Linked list is empty!")
+    else:
+        while p_head:
+            print(p_head.data)
+            p_head = p_head.next
+
+
 if __name__ == '__main__':
-
     linkedlist = LinkedList()   # 生成空链表
-    linkedlist.print()   # 打印
-    linkedlist.init([1, 2, 3, 4, 5])     # 链表初始化
-    linkedlist.print()   # 打印
-    linkedlist.print_reverse()
-
+    # linkedlist.print()   # 打印
+    # linkedlist.init([1, 2, 3, 4, 5])     # 链表初始化
+    linkedlist.init([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])     # 链表初始化
+    # linkedlist.print()   # 打印
+    # linkedlist.print_reverse()
+    print_linkedlist(delete_duplication(linkedlist.head))
     # print(linkedlist.getitem(4))
     # linkedlist.append(6)
     # print(linkedlist.find(3))
