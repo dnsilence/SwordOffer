@@ -1,6 +1,3 @@
-# -*- coding:utf-8 -*-
-
-
 def replace_blank(str):
     if str is None:
         return
@@ -27,7 +24,58 @@ def replace_blank(str):
     print(str)
 
 
+def match(s, pattern):
+    """
+    正则表达式匹配函数，注意这里[]不是None，但是len为0
+    :param s: 字符串
+    :param pattern: 模式
+    :return: 是否匹配
+    """
+    # 字符串s长度和模式pattern长度均为0
+    if len(s) == 0 and len(pattern) == 0:
+        return True
+
+    # 字符串s长度不为零,模式pattern长度为0
+    elif len(s) != 0 and len(pattern) == 0:
+        return False
+
+    # 字符串s长度为零,模式pattern不为0
+    elif len(s) == 0 and len(pattern) != 0:
+        if len(pattern) > 1 and pattern[1] == '*':
+            return match(s, pattern[2:])
+        else:
+            return False
+
+    # 字符串s长度不为零,模式pattern长度不为0
+    else:
+        # 模式pattern长度大于1并且第二个元素为*
+        if len(pattern) > 1 and pattern[1] == '*':
+            # 字符串与模式第一个元素不同，则pattern前两位当成空
+            if s[0] != pattern[0] and pattern[0] != '.':
+                return match(s, pattern[2:])
+
+            # 如果s[0]和pattern[0]相同，且pattern[1]为*，则
+            # pattern后移两位，s不变，相当于置空pattern前两位，匹配后续
+            # pattern后移两位，s后移一位，相当于pattern前两位与s[0]匹配
+            # pattern不变，s后移一位，相当于pattern与s中的多位匹配
+            # 第二种是第三种递归的结束条件
+            else:
+                return match(s, pattern[2:]) or \
+                       match(s[1:], pattern[2:]) or \
+                       match(s[1:], pattern)
+
+        # 模式pattern长度为1或者模式第二个元素不为*
+        else:
+            # 如果相同或者匹配.，则继续判断
+            if s[0] == pattern[0] or pattern[0] == '.':
+                return match(s[1:], pattern[1:])
+            # 不匹配
+            else:
+                return False
+
+
 if __name__ == '__main__':
     # str = " faj kldaf ljf@$#@3 43 "
-    str = "fad"
-    replace_blank(str)
+    # str = "fad"
+    # replace_blank(str)
+    print(match("abab", ".*b.."))
