@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a10e2e8e-c395-404f-957c-3d404d3b8b0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chap2/dynamic_programming.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap2/greedy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap2/power.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap2/matrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
+            <state>
               <caret column="14" selection-end-line="1" />
             </state>
           </provider>
@@ -44,17 +43,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap2/dynamic_programming.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="1026">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap2/greedy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="459">
               <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chap2/power.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chap2/queue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" lean-forward="true" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -116,6 +133,7 @@
         <option value="$PROJECT_DIR$/chap2/matrix.py" />
         <option value="$PROJECT_DIR$/chap2/dynamic_programming.py" />
         <option value="$PROJECT_DIR$/chap2/greedy.py" />
+        <option value="$PROJECT_DIR$/chap2/power.py" />
       </list>
     </option>
   </component>
@@ -176,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.greedy">
+  <component name="RunManager" selected="Python.power">
     <configuration name="dynamic_programming" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SwordOffer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,7 +279,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="power" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SwordOffer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,7 +291,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\DN_Si\PycharmProjects\SwordOffer\chap2\binarytree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap2/power.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,11 +302,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.power" />
         <item itemvalue="Python.greedy" />
         <item itemvalue="Python.dynamic_programming" />
         <item itemvalue="Python.matrix" />
         <item itemvalue="Python.fibonacci" />
-        <item itemvalue="Python.tree" />
       </list>
     </recent_temporary>
   </component>
@@ -387,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557667933350</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cut rope">
+      <created>1558016146502</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558016146503</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -475,7 +500,8 @@
     <MESSAGE value="fibonacci" />
     <MESSAGE value="classification" />
     <MESSAGE value="matrix path" />
-    <option name="LAST_COMMIT_MESSAGE" value="matrix path" />
+    <MESSAGE value="cut rope" />
+    <option name="LAST_COMMIT_MESSAGE" value="cut rope" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -490,13 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4320">
           <caret line="160" column="24" selection-start-line="160" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chap2/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -539,6 +558,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/dynamic_programming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chap2/fibonacci.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -546,24 +579,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chap2/matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret column="14" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chap2/dynamic_programming.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chap2/greedy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="459">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/power.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
