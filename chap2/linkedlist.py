@@ -180,12 +180,31 @@ def delete_duplication(p_head):
 
 
 def print_linkedlist(p_head):
+    """打印链表"""
     if p_head is None:
         print("Linked list is empty!")
     else:
         while p_head:
             print(p_head.data)
             p_head = p_head.next
+
+
+def find_kth_to_tail(p_head, k):
+    """链表中倒数第k个结点"""
+    if p_head is None or k <= 0:
+        return None
+    p_a_head = p_head
+    p_b_head = None
+    for i in range(k-1):    # 注意这里只移动k-1次即可到第k个结点
+        if p_a_head.next is not None:
+            p_a_head = p_a_head.next
+        else:
+            return None
+    p_b_head = p_head
+    while p_a_head.next is not None:
+        p_a_head = p_a_head.next
+        p_b_head = p_b_head.next
+    return p_b_head
 
 
 if __name__ == '__main__':

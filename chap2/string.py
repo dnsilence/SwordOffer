@@ -1,4 +1,5 @@
 def replace_blank(str):
+    """字符串中空格替换为指定字符"""
     if str is None:
         return
     original_length = len(str)
@@ -72,6 +73,27 @@ def match(s, pattern):
             # 不匹配
             else:
                 return False
+
+
+def is_numeric(string):
+    """表示数值的字符串"""
+    if len(string) == 0:
+        return False
+
+    numeric = scan_integer()
+    if
+
+def scan_unsigned_integer(string):
+    for char in string:
+        if char >= '9' or char <= '0':
+            return False
+    return True
+
+
+def scan_integer(string):
+    if string[0] == '+' or string[0] == '-':
+        return scan_unsigned_integer(string[1:])
+    return scan_unsigned_integer()
 
 
 if __name__ == '__main__':

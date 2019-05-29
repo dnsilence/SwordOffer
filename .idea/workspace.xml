@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a10e2e8e-c395-404f-957c-3d404d3b8b0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap2/linkedlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap2/linkedlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chap2/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap2/string.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,9 +14,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chap2/string.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chap2/linkedlist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="201" column="23" lean-forward="true" selection-start-line="201" selection-start-column="23" selection-end-line="201" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -68,9 +82,9 @@
         <option value="$PROJECT_DIR$/chap3/power.py" />
         <option value="$PROJECT_DIR$/chap3/print_n_num.py" />
         <option value="$PROJECT_DIR$/chap2/linklist.py" />
-        <option value="$PROJECT_DIR$/chap2/linkedlist.py" />
-        <option value="$PROJECT_DIR$/chap2/string.py" />
         <option value="$PROJECT_DIR$/chap3/regular.py" />
+        <option value="$PROJECT_DIR$/chap2/string.py" />
+        <option value="$PROJECT_DIR$/chap2/linkedlist.py" />
       </list>
     </option>
   </component>
@@ -88,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +128,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558265707282</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="match regular expression">
+      <created>1558276187168</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558276187168</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -415,7 +436,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841017" visible="true" weight="0.3737705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841017" weight="0.3737705" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920508" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -486,7 +507,8 @@
     <MESSAGE value="power" />
     <MESSAGE value="print_n_num" />
     <MESSAGE value="delete duplication" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete duplication" />
+    <MESSAGE value="match regular expression" />
+    <option name="LAST_COMMIT_MESSAGE" value="match regular expression" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -571,20 +593,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chap2/linkedlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="194" column="48" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chap3/regular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chap3/regular.py" />
     <entry file="file://$PROJECT_DIR$/chap2/queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -593,7 +602,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chap2/string.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chap2/linkedlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="201" column="23" lean-forward="true" selection-start-line="201" selection-start-column="23" selection-end-line="201" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
