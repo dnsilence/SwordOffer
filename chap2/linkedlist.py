@@ -157,6 +157,22 @@ class LinkedList(object):
                     print("Index exceeded!")
 
 
+def merge(p_head1, p_head2):
+    if p_head1 is None:
+        return p_head2
+    if p_head2 is None:
+        return p_head1
+
+    p_merge_head = None
+    if p_head1.data < p_head2.data:
+        p_merge_head = p_head1
+        p_merge_head.next = merge(p_head1.next, p_head2)
+    else:
+        p_merge_head = p_head2
+        p_merge_head.next = merge(p_head1, p_head2.next)
+    return p_merge_head
+
+
 def delete_duplication(p_head):
     """删除一个排序链表中重复的节点"""
     if p_head is None or p_head.next is None:
@@ -207,15 +223,35 @@ def find_kth_to_tail(p_head, k):
     return p_b_head
 
 
+def reverse_list(p_head):
+    """翻转链表"""
+    p_reversed_head = None  # 当链表为空时返回空
+    p_node = p_head
+    p_prev = None
+    while p_node is not None:
+        p_next = p_node.next    # 存放下一元素
+        if p_next is None:
+            p_reversed_head = p_node    # 当链表为单个元素时返回单个元素
+        p_node.next = p_prev    # 将当前结点的下一节点置为其前结点
+        p_prev = p_node         # 更新p_pre
+        p_node = p_next
+    return p_reversed_head
+
+
 if __name__ == '__main__':
-    linkedlist = LinkedList()   # 生成空链表
+    linkedlist_1 = LinkedList()   # 生成空链表
+    linkedlist_2 = LinkedList()   # 生成空链表
+
     # linkedlist.print()   # 打印
-    # linkedlist.init([1, 2, 3, 4, 5])     # 链表初始化
-    linkedlist.init([1, 1, 1, 1, 1])     # 链表初始化
+    linkedlist_1.init([1, 2, 3, 4, 5])     # 链表初始化
+    linkedlist_2.init([2, 4, 6, 8, 10])     # 链表初始化
+    print_linkedlist(merge(linkedlist_1.head, linkedlist_2.head))
+    # linkedlist.init([1, 1, 1, 1, 1])     # 链表初始化
     # linkedlist.init([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])     # 链表初始化
     # linkedlist.print()   # 打印
     # linkedlist.print_reverse()
-    print_linkedlist(delete_duplication(linkedlist.head))
+    # print_linkedlist(delete_duplication(linkedlist.head))
+    # print(find_kth_to_tail(linkedlist.head, 5).data)
     # print(linkedlist.getitem(4))
     # linkedlist.append(6)
     # print(linkedlist.find(3))
